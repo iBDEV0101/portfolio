@@ -24,7 +24,7 @@ def home(request):
         data = {
             "nome":"iBDEV",
             "nom": "Ibrahim SAWADOGO ",
-    "adresse": "zongo,Ouagadougou,Burkina Faso",
+    "adresse": "pissy,Ouagadougou,Burkina Faso",
     "email":"ibdev0101@gmail.com",
     "tel":"+226 74 53 46 94 / +226 63 69 69 61",
     "description": "Développeur Flutter et Django",

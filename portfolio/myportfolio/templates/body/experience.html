@@ -339,8 +339,62 @@
 </style>
 
 
-
-
+    <div class="experience" id="experience">
+        <div class="container">
+            <div class="row g-5">
+                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <p>Mon CV</p>
+                <h2>Expérience professionnelle</h2>
+            </header>
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+                            <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
+                                <li class="nav-item w-50">
+                                    <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                                </li>
+                                <li class="nav-item w-50">
+                                    <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane fade show p-0 active">
+                                <div class="row gy-5 gx-4">
+                                    <div class="timeline">
+                                        {% for exp in data.experiences %}
+                                        <div class="timeline-item {{ exp.side }} wow {{ exp.animation }}" data-wow-delay="0.1s">
+                                            <div class="timeline-text">
+                                                <div class="timeline-date">{{ exp.date }}</div>
+                                                <h2>{{ exp.title }}</h2>
+                                                <h4>{{ exp.company }}</h4>
+                                                <p>{{ exp.description }}</p>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                                <div id="tab-2" class="tab-pane fade show p-0">
+                                    <div class="row gy-5 gx-4">
+                                         <div class="timeline">
+                                            {% for edu in data.education %}
+                                            <div class="timeline-item {{ edu.side }} wow {{ edu.animation }}" data-wow-delay="0.1s">
+                                                <div class="timeline-text">
+                                                    <div class="timeline-date">{{ edu.years }}</div>
+                                                    <h2>{{ edu.title }}</h2>
+                                                    <h4>{{ edu.school }}</h4>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <header class="section-header text-center wow zoomIn pt-5" data-wow-delay="0.1s">
+                    <a class="btn section-header text-center wow zoomIn " href="">Telecharger Mon CV</a>
+                </header>
+            </div>
+        </div>
+    </div>
     <div class="container-xxl" id="skill">
         <div class="container">
             <div class="row g-5">
@@ -402,59 +456,3 @@
     </div>
 
 
-<div class="experience" id="experience">
-    <div class="container">
-        <div class="row g-5">
-            <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-            <p>Mon CV</p>
-            <h2>Expérience professionnelle</h2>
-        </header>
-            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
-                        <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
-                            <li class="nav-item w-50">
-                                <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
-                            </li>
-                            <li class="nav-item w-50">
-                                <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row gy-5 gx-4">
-                                <div class="timeline">
-                                    {% for exp in data.experiences %}
-                                    <div class="timeline-item {{ exp.side }} wow {{ exp.animation }}" data-wow-delay="0.1s">
-                                        <div class="timeline-text">
-                                            <div class="timeline-date">{{ exp.date }}</div>
-                                            <h2>{{ exp.title }}</h2>
-                                            <h4>{{ exp.company }}</h4>
-                                            <p>{{ exp.description }}</p>
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-                            <div id="tab-2" class="tab-pane fade show p-0">
-                                <div class="row gy-5 gx-4">
-                                     <div class="timeline">
-                                        {% for edu in data.education %}
-                                        <div class="timeline-item {{ edu.side }} wow {{ edu.animation }}" data-wow-delay="0.1s">
-                                            <div class="timeline-text">
-                                                <div class="timeline-date">{{ edu.years }}</div>
-                                                <h2>{{ edu.title }}</h2>
-                                                <h4>{{ edu.school }}</h4>
-                                            </div>
-                                        </div>
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            <header class="section-header text-center wow zoomIn pt-5" data-wow-delay="0.1s">
-                <a class="btn section-header text-center wow zoomIn " href="">Telecharger Mon CV</a>
-            </header>
-        </div>
-    </div>
-</div>
